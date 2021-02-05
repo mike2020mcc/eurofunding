@@ -1,0 +1,24 @@
+#login-form
+  = fields_for(:session, @session) do |f|
+
+    .modal-header.bg-secondary
+      %h5.modal-title#modalTitle.text-white
+        Login
+      %button.close{type: 'button', data: { dismiss: 'modal' }, 'aria-label' => 'Close' }
+        %span{'aria-hidden' => true}
+          ×
+
+    .modal-body.bg-white
+      .mb-4
+        = f.label :email, 'Email address', class: 'control-label'
+        = f.text_field :email, class: 'form-control form-control-lg', autocomplete: 'email'
+        .invalid-feedback
+          = f.object.errors.full_messages_for(:email).to_sentence
+      .mb-4
+        = f.label :password, class: 'control-label'
+        = f.password_field :password, class: 'form-control form-control-lg', autocomplete: 'current-password'  
+        .invalid-feedback
+          = f.object.errors.full_messages_for(:password).to_sentence
+
+    .modal-footer.hero-cta
+      = f.submit 'Login', name: nil, class: 'btn btn-primary btn-block'

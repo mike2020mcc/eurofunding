@@ -1,0 +1,60 @@
+.rectangle {
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    padding-bottom: 90%;
+  }
+
+  &.rectangle-slim:after {
+    padding-bottom: 60%;
+  }
+
+  .rectangle-inner {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+    &.hover-effect {
+      overflow: hidden;
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 0%;
+        height: 100%;
+        background-color: rgba(theme-color(primary), 0.5);
+        transform: skewX(15deg) translateX(-50%);
+        transition: 0.6s ease-in-out;
+      }
+      &:hover:after {
+        width: 130%;
+      }
+    }
+  }
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+
+  h6 {
+    font-size: 1.4rem;
+    margin: 0;
+  }
+
+  .rectangle-overlay {
+    z-index: 1;
+  }
+}

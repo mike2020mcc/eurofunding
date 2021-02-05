@@ -1,0 +1,15 @@
+.footer {
+  background-color: #495057;
+  font-size: 0.8rem;
+  a {
+    color: white;
+    text-decoration: none;
+    transition: color 350ms;
+    &:hover {
+      color: theme-color(secondary);
+    }
+    &.text-secondary:hover {
+      color: white !important;
+    }
+  }
+}

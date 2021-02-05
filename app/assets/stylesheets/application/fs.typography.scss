@@ -1,0 +1,90 @@
+.container {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+h1, .h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -.025em;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 3.5rem; 
+  }
+
+  span {
+    font-weight: 300;
+  }
+
+}
+
+.max-width {
+  max-width: 600px;
+}
+
+h2, .h2 {
+  font-size: 0.8rem;
+  font-weight: 600;
+  //text-transform: uppercase;
+  //letter-spacing: .15rem;
+  line-height: 1.4;
+
+  @include media-breakpoint-up(sm) {
+    font-size: 1.2rem;
+  }
+
+}
+
+.text-shadow {
+  text-shadow: 0 0 7px rgba(black, 0.35);
+}
+
+.text-maximum {
+  max-width: 40rem;
+}
+
+.my-6 {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+
+.my-7 {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+
+.headline {
+  color: theme-color(primary);
+}
+
+.letter-spacing {
+  letter-spacing: .15rem;
+}
+
+
+u.underline {
+  position: relative;
+  text-decoration: none;
+  /*
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 100%;
+    border: 2px solid theme-color(secondary);
+    border-radius: 4px;
+  }
+  */
+}
+
+
+a.no-underline {
+  text-decoration: none;
+  color: inherit !important;
+  &:hover {
+    color: inherit !important;
+  }
+}
+

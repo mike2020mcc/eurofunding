@@ -1,0 +1,49 @@
+#user-form
+  = fields_for(:user, @user) do |f|
+    .row
+      .col-lg-6.offset-lg-3
+        .mb-4
+          .row
+            .col
+              = f.label :given_name, 'First name', class: 'control-label'
+              = f.text_field :given_name, class: 'form-control form-control-lg', autocomplete: 'given-name'
+              .invalid-feedback
+                = f.object.errors.full_messages_for(:given_name).to_sentence
+            .col
+              = f.label :family_name, 'Last name', class: 'control-label'
+              = f.text_field :family_name, class: 'form-control form-control-lg', autocomplete: 'family-name'
+              .invalid-feedback
+                = f.object.errors.full_messages_for(:family_name).to_sentence
+        .mb-4
+          = f.label :email, 'Email address', class: 'control-label'
+          = f.text_field :email, class: 'form-control form-control-lg', autocomplete: 'email'
+          .invalid-feedback
+            = f.object.errors.full_messages_for(:email).to_sentence      
+        .mb-4
+          = f.label :country
+          = f.select :country, Country.all.sort_by{|k| k.name }.map{|k, v| [k.name, k.alpha2] }, {}, class: 'form-control form-control-lg'
+          -#.invalid-feedback
+            = f.object.errors.full_messages_for(:country).to_sentence
+        .mb-4
+          = f.label :mobile, 'Mobile number', class: 'control-label'
+          = f.text_field :mobile, class: 'form-control form-control-lg', autocomplete: 'tel'
+          .invalid-feedback
+            = f.object.errors.full_messages_for(:mobile).to_sentence    
+        
+        .mb-4
+          = f.label :password, 'Password', class: 'control-label'
+          = f.password_field :password, class: 'form-control form-control-lg', autocomplete: 'new-password'
+          .invalid-feedback
+            = f.object.errors.full_messages_for(:password).to_sentence    
+        
+        .mb-4
+          = f.label :password_confirmation, 'Confirm password', class: 'control-label'
+          = f.password_field :password_confirmation, class: 'form-control form-control-lg', autocomplete: 'new-password' 
+          .invalid-feedback
+            = f.object.errors.full_messages_for(:password_confirmation).to_sentence
+        .mb-4
+          = f.hidden_field :remittances
+          = f.hidden_field :banking
+          = f.submit 'Submit application', class: 'btn btn-primary btn-lg btn-block'    
+        
+

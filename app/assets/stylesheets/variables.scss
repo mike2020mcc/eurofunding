@@ -1,0 +1,24 @@
+$theme-colors: (
+  'primary': #1598B7,
+  'secondary': #E7804C,
+);
+
+$font-family-sans-serif: 'Poppins', sans-serif;
+$font-family-base: $font-family-sans-serif !default;
+
+$navbar-nav-link-padding-x: 0;
+$navbar-dark-color: white;
+$navbar-dark-hover-color: white;
+//$navbar-dark-active-color: map-get($theme-colors, primary);
+
+$navbar-light-color: theme-color(primary);
+$navbar-light-hover-color: map-get($theme-colors, secondary);
+$navbar-light-active-color: map-get($theme-colors, secondary);
+
+$enable-responsive-font-sizes: true;
+$enable-transitions: true;
+
+$body-bg: #f8f9fa;
+$body-color: #444;
+
+

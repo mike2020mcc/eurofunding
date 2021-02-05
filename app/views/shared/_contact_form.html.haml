@@ -1,0 +1,11 @@
+#contactDelivered
+  %h1.m-0.pb-4
+    %small
+      Get a callback
+     
+  %p.mb-4
+    Want to find out how we can help you or need client testimonials? Complete the form below and we'll call you back...
+  - form = EmailForm.new(country: CountriesService.lookup(request.ip))
+  = form_for form, as: :form, url: email_deliver_path, remote: true do |f|
+    = render partial: 'email/form', locals: { form: form }
+

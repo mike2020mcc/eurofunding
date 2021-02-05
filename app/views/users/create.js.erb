@@ -1,0 +1,6 @@
+<% if @user.errors.any? %>
+  var loginForm = document.getElementById('user-form');
+  loginForm.outerHTML = "<%= j render partial: 'users/fields' %>";
+<% else %>
+  window.location.href = "<%= @user.shufti_verification_url %>";
+<% end %>

@@ -1,0 +1,34 @@
+- provide(:title, 'Financial Planning')
+- provide(:description, 'Financial planning is related to your lifestyle, long-term plans and attitude to risk.')
+- provide(:og_image, 'og-financial-planning.jpg')
+.position-relative.overflow-hidden
+  #hero.d-flex.align-items-center
+    = hero_picture_tag 'other/financial-planning.jpg', class: 'lazy', alt: 'Financial Planning'
+    .container.text-white.text-center{style: 'z-index: 1'}
+      .hero-padding
+        %h1.my-2.wow.fadeInDown.text-shadow
+          Financial #{content_tag(:span, 'Planning')}
+        %h2.my-2.wow.fadeInUp.text-shadow
+          Providing you with a clear roadmap to your financial goals and ambitions
+          
+%section.container.my-7.mb-5
+  .row
+    .col
+      = insert_or_create_snippet('Financial Planning', 'Body', 'Content') do
+        %p.lead
+          You work hard for your money &mdash; so it should work hard for you.
+        %p
+          Financial planning is about ensuring that your arrangements are suited to your lifestyle, long-term plans and your attitude to risk.
+        %p
+          Financial Solutions remains committed to independence at a time when truly independent advice is increasingly rare.
+          We are not "tied" to any specific supplier of financial planning products, 
+          so our advice is always impartial and objective.
+        %p
+          Financial advice can be a minefield of uncertainty. Trust and impartiality are hugely important to us and we aim
+          to deliver both.
+        %p
+          Building successful, long-term client relationships is why after 20 years
+          Financial Solutions continues to believe in working as a partnership with clients; working with you
+          as the years go by and circumstances change.
+
+= render partial: 'expertise_rectangles', locals: { exclude: 'financial_planning' }

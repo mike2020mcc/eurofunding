@@ -1,0 +1,106 @@
+- provide(:title, 'My Account')
+- provide(:description, 'My Account')
+
+%section.container.my-7.mb-5
+  .row
+    .col
+      = link_to 'Logout', logout_path, class: 'btn btn-primary float-right'
+      %h1.headline.m-0.py-4.wow.fadeInLeft
+        My Account
+      %hr
+      %p
+        Name:&nbsp;
+        %strong
+          = current_user.full_name
+        %br
+        Email:&nbsp;
+        %strong
+          = current_user.email
+        %br
+        Country:&nbsp;
+        %strong
+          = current_user.country_name
+        %br
+        Mobile number:&nbsp;
+        %strong
+          = current_user.mobile
+        %br
+        IP Address:&nbsp;
+        %strong
+          = current_user.login_ip
+
+      %p
+        Status:&nbsp;
+        %strong
+          = current_user.shufti_event_formatted
+        %br
+        %nobr
+          Original verification URL:&nbsp;
+        %strong
+          = current_user.shufti_verification_url
+        %hr
+        Debug code
+        %br
+        %code
+          %small= JSON.parse(current_user.shufti_response)
+
+-#%section.container.my-5.px-0.px-sm-3
+  .row.no-gutters
+    .col-md-6.col-lg-4.wow.fadeInLeft{'data-wow-duration' => '1s'}
+      = link_to expertise_path, class: 'rectangle mt-1 m-sm-1 d-block' do
+        .rectangle-inner.bg-secondary.text-white.p-5.d-flex.align-items-center.text-center
+          .w-100
+            %h4
+              %strong
+                Our Expertise
+            %p
+              From savings, pensions and mortgage advice to wills and trusts, our range of
+              services helps to make sure your money works harder for you. Both now and in the future.
+            %p.mt-4.text-uppercase.letter-spacing
+              %strong
+                All services &rarr;
+
+    .col-sm-6.col-lg-4.wow.fadeInDown{'data-wow-duration' => '1s'}
+      = render partial: 'home_rectangle', locals: { path: expertise_financial_planning_path, heading: 'Financial', subheading: 'Planning', image: 'financial-planning' }
+
+    .col-sm-6.col-lg-4.wow.fadeInRight{'data-wow-duration' => '1s'}
+      = render partial: 'home_rectangle', locals: { path: expertise_retirement_planning_path, heading: 'Retirement', subheading: 'Planning', image: 'retirement-planning' }
+
+    .col-sm-6.col-lg-4.wow.fadeInLeft{'data-wow-duration' => '1s'}
+      = render partial: 'home_rectangle', locals: { path: expertise_protection_advice_path, heading: 'Protection', subheading: 'Advice', image: 'protection-advice' }
+
+    .col-sm-6.col-lg-4.wow.fadeInUp{'data-wow-duration' => '1s'}
+      = render partial: 'home_rectangle', locals: { path: expertise_mortgage_advice_path, heading: 'Mortgage', subheading: 'Advice', image: 'mortgage-advice' }
+
+    .col-sm-6.col-lg-4.wow.fadeInRight{'data-wow-duration' => '1s'}
+      = render partial: 'home_rectangle', locals: { path: expertise_will_and_trust_advice_path, heading: 'Will & Trust', subheading: 'Advice', image: 'will-and-trust-advice' }
+
+-#%section
+  .container.my-7.mb-5
+    .row
+      .col.text-center
+        %h1.headline.m-0.py-4.wow.fadeInLeft
+          Meet the Team
+        %h2.m-0.py-4.wow.fadeInRight
+          Our team has over 50 years experience in helping individuals with their financial needs
+  .bg-primary.text-white{style: 'padding-top: 5rem; padding-bottom: 4rem'}
+    .container
+      = render partial: 'shared/team_teaser'
+   
+-#%section
+  .container.my-7.mb-5
+    .row
+      .col.text-center
+        %h1.headline.m-0.py-4.wow.fadeInLeft
+          Take control of your financial future
+        %h2.m-0.py-4.wow.fadeInRight
+          Take the first step today book a call at a time that suits you
+   
+  .container-fluid.p-0.shadow-lg.bg-white
+    .row.no-gutters
+      .col-lg-6.d-none.d-lg-block{style: 'min-height: 620px'}
+        = hero_picture_tag 'other/contact-woman.jpg', class: 'lazy img-fit', alt: 'Contact us'
+      .col-lg-6.p-5
+        = render partial: 'shared/contact_form'
+        
+

@@ -1,0 +1,22 @@
+(function() {
+
+  'use strict';
+
+  // See https://gist.github.com/DimaSamodurov/127c39244d0b411bfb474a8102a83497
+  window.dataLayer = window.dataLayer || [];
+  
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  document.addEventListener('turbolinks:load', function(event) {
+    if (typeof gtag === 'function') {
+      gtag('js', new Date());
+      gtag('config', '<%= Figaro.env.ga_tracking_id %>', {
+        'page_location': event.data.url
+      });
+    }
+  });
+
+})();
+

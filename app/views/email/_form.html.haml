@@ -1,0 +1,40 @@
+#contactForm
+  -#= hidden_field_tag :authenticity_token, form_authenticity_token
+  = fields_for(:form, form) do |f|
+    .row
+      .col-sm-6.mb-4
+        = f.label :first_name, class: 'control-label'
+        = f.text_field :first_name, class: 'form-control', autocomplete: 'given-name'
+        -#.invalid-feedback
+          = f.object.errors.full_messages_for(:first_name).to_sentence
+      .col-sm-6.mb-4
+        = f.label :last_name
+        = f.text_field :last_name, class: 'form-control', autocomplete: 'family-name'
+        -#.invalid-feedback
+          = f.object.errors.full_messages_for(:last_name).to_sentence
+      .col-sm-6.mb-4
+        = f.label :email, 'Email address'
+        = f.text_field :email, class: 'form-control', autocomplete: 'email'
+        -#.invalid-feedback
+          = f.object.errors.full_messages_for(:email).to_sentence
+      .col-sm-6.mb-4
+        = f.label :country
+        = f.select :country, Country.all.sort_by{|k| k.name }.map{|k, v| [k.name, k.alpha2] }, {}, class: 'form-control'
+        -#.invalid-feedback
+          = f.object.errors.full_messages_for(:country).to_sentence
+      .col-sm-6.mb-4
+        = f.label :telephone
+        = f.text_field :telephone, class: 'form-control', autocomplete: 'tel'
+        -#.invalid-feedback
+          = f.object.errors.full_messages_for(:telephone).to_sentence
+      .col-sm-6.mb-4
+        = f.label :call_time, 'Best time for us to call'
+        = f.select :call_time, [ 'Morning', 'Afternoon', 'Evening' ], {}, class: 'form-control'
+        -#.invalid-feedback
+          = f.object.errors.full_messages_for(:call_time).to_sentence
+      .col.hero-cta
+        = recaptcha_v3 action: 'contact', element: false
+        = hidden_field_tag 'g-recaptcha-response[contact]', nil, id: 'g-recaptcha-response-contact'
+        = f.button 'Submit', id: 'submit', type: 'button', class: 'btn btn-lg btn-primary mt-3', data: { disable_with: 'Sending...' }
+        -#= f.submit 'Submit', id: 'submit', class: 'btn btn-lg btn-primary mt-3', data: { disable_with: 'Sending...' }
+

@@ -1,0 +1,8 @@
+
+<% if form.errors.any? %>
+  var contactForm = document.getElementById('contactForm');
+  contactForm.outerHTML = "<%= j render partial: 'form', locals: { form: form } %>";
+<% else %>
+  var contactForm = document.getElementById('contactDelivered');
+  contactForm.innerHTML = "<%= j render partial: 'delivered', locals: { form: form } %>";
+<% end %>

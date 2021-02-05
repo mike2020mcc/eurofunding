@@ -1,0 +1,36 @@
+- provide(:title, 'Meet the Team')
+- provide(:description, 'Over 50 years of experience in financial planning, pensions, investments, savings, wills, trusts, life insurance and mortgages.')
+- provide(:og_image, 'og-about-team.jpg')
+.position-relative.overflow-hidden
+  #hero.d-flex.align-items-center
+    = hero_picture_tag 'hero/image/about-team.jpg', class: 'lazy', alt: 'Meet the Team'
+    .container.text-white.text-center{style: 'z-index: 1'}
+      .hero-padding
+        %h1.my-2.wow.fadeInDown.text-shadow
+          #{content_tag(:span, 'Meet the')} Team
+        %h2.my-2.wow.fadeInUp.text-shadow
+          Over 50 years of industry experience under our belt
+          
+%section.container.my-7.mb-5
+  .row
+    .col
+      = insert_or_create_snippet('Team', 'Body', 'Content') do
+        %p.lead
+          When you are searching for a financial adviser you want the right blend of market knowledge,
+          communication skills and flexible problem-solving ability &mdash; that's what we look for too.
+        %p
+          Together we have the skill set to offer a broad range of financial planning services - including
+          pensions, investment and savings advice, will and trust advice, health cover, life cover and mortgages.
+          
+%section.container.my-5
+  .row
+    .col-lg-6.col-xl-4.text-center
+      = render partial: 'team_member', locals: { first_name: 'Anthony', last_name: 'Compton', title: 'Director', body: insert_or_create_snippet('Team', 'Bio', 'Anthony Compton', 'Establshed in 1998, Tony has been part of the Financial Solutions story since 2001 and took over the helm from founder, Max Durrant in 2013. Tony continues to look at ways to drive the company forward whilst ensuring that client service and that "personal touch" continues to remain the companys prime focus. Tony has been married 15 years, enjoys travelling, family and spends his time between Manila and Nice.') }
+    .col-lg-6.col-xl-4.text-center
+      = render partial: 'team_member', locals: { first_name: 'Paul', last_name: 'Thompson', title: 'Director', body: insert_or_create_snippet('Team', 'Bio', 'Paul Thompson', 'Paul has 20 years experience in the financial services industry. He enjoys providing an efficient, smooth and clear advice process for clients. His particular expertise lies in investments, savings and pensions. He is a proud father, and with any spare time enjoys sports and travel.') }
+    .col-lg-6.col-xl-4.text-center
+      = render partial: 'team_member', locals: { first_name: 'Robert', last_name: 'Coleclough', title: 'Senior Advisor', body: insert_or_create_snippet('Team', 'Bio', 'Robert Coleclough', 'TODO') }
+    .col-lg-6.col-xl-4.text-center
+      = render partial: 'team_member', locals: { first_name: 'Kathy', last_name: 'Pitcher', title: 'New business and compliance', body: insert_or_create_snippet('Team', 'Bio', 'Kathy Pitcher', 'TODO') }
+    .col-lg-6.col-xl-4.text-center
+      = render partial: 'team_member', locals: { first_name: 'Gemma', last_name: 'Briones', title: 'Senior Administrator', body: insert_or_create_snippet('Team', 'Bio', 'Gemma Briones', 'TODO') }

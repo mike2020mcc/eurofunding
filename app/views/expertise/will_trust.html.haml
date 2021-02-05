@@ -1,0 +1,38 @@
+- provide(:title, 'Will & Trust Advice')
+- provide(:description, 'Make sure your assets go to the right people if you become seriously ill or die.')
+- provide(:og_image, 'og-will-and-trust-advice.jpg')
+.position-relative.overflow-hidden
+  #hero.d-flex.align-items-center
+    = hero_picture_tag 'other/will-and-trust-advice.jpg', class: 'lazy', alt: 'Will & Trust Advice'
+    .container.text-white.text-center{style: 'z-index: 1'}
+      .hero-padding
+        %h1.my-2.wow.fadeInDown.text-shadow
+          Will & Trust #{content_tag(:span, 'Advice')}
+        %h2.my-2.wow.fadeInUp.text-shadow
+          Provide financial security for loved ones
+          
+%section.container.my-7.mb-5
+  .row
+    .col
+      = insert_or_create_snippet('Will & Trust Advice', 'Body', 'Content') do
+        %p.lead
+          The needs of individuals old or young are different.
+        %p
+          We can help you find answers to difficult questions &mdash; the kind that keep you awake at night like these:
+        %ul
+          %li
+            Is there a way to make sure my assets will go to the people I want, when I want and in the manner I want? 
+          %li
+            How can I protect my assets after factoring in the high cost of long-term medical care and other threats?
+          %li
+            How will I pay for a nursing home? Will my spouse have to move out of our home?
+          %li
+            If I become incapacitated, how can I ensure somebody I trust will have authority to make financial and medical decisions?
+          %li
+            Do I need a Will or a Trust?
+          %li
+            How do I make sure my family won't have to go through probate?
+        %p
+          We can help you find the right solutions to issues like these and many more. Let's talk soon.
+          
+= render partial: 'expertise_rectangles', locals: { exclude: 'will_and_trust_advice' }

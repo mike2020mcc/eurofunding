@@ -1,0 +1,31 @@
+- provide(:title, 'Protection Advice')
+- provide(:description, 'Advice about selecting the best life insurance policy and medical insurance.')
+- provide(:og_image, 'og-protection-advice.jpg')
+.position-relative.overflow-hidden
+  #hero.d-flex.align-items-center
+    = hero_picture_tag 'other/protection-advice.jpg', class: 'lazy', alt: 'Protection Advice'
+    .container.text-white.text-center{style: 'z-index: 1'}
+      .hero-padding
+        %h1.my-2.wow.fadeInDown.text-shadow
+          Protection #{content_tag(:span, 'Advice')}
+        %h2.my-2.wow.fadeInUp.text-shadow
+          Helping you plan for the unexpected
+          
+%section.container.my-7.mb-5
+  .row
+    .col
+      = insert_or_create_snippet('Protection Advice', 'Body', 'Content') do
+        %p.lead
+          Protecion is fundamental. It may not be the most exciting of subjects, but if we want to
+          keep safe all that we hold dear, it is a subject we need to think about.
+        %p
+          Good health is arguably our most precious asset, and with it comes the ability to
+          earn an income and look after others. But it is not something we should take 
+          for granted. The sad fact is that we are all likely to be close to someone who
+          gets a serious illness. Take cancer, for instance;
+          = link_to 'Every four minutes someone in the UK dies from cancer.', 'https://www.cancerresearchuk.org/health-professional/cancer-statistics-for-the-uk#heading-One', target: '_blank'
+        %p
+          So be it life protection, medical, critical illness, income replacement - everyone needs
+          to think. 
+
+= render partial: 'expertise_rectangles', locals: { exclude: 'protection_advice' }

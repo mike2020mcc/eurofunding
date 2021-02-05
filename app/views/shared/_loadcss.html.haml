@@ -1,0 +1,6 @@
+= stylesheet_link_tag 'application', as: 'style', onload: raw("this.onload=null;this.rel='stylesheet'"), 'data-turbolinks-track': 'reload', 'data-penthouse': true
+%noscript<
+  = stylesheet_link_tag 'application', data: { 'turbolinks-track': 'reload' }
+%script<
+  - cache nil do
+    = Uglifier.compile(File.read(Rails.root.join('app', 'views', 'shared', 'loadcss.js'))).html_safe

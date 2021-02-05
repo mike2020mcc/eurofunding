@@ -1,0 +1,10 @@
+= link_to path, class: 'rectangle mt-1 m-sm-1 d-block' do
+  .rectangle-inner.hover-effect.bg-primary.text-white.p-4.d-flex.align-items-end.text-center.p-4
+    %picture
+      %source{'data-srcset': "#{image_path('other/' + image + '-xx.webp')}, #{image_path('other/' + image + '-xx@2x.webp')} 2x", type: 'image/webp'}
+      = image_tag "other/#{image}-poster.jpg", class: 'lazy', 'data-srcset': "#{image_path('other/' + image + '-xx.jpg')}, #{image_path('other/' + image + '-xx@2x.jpg')} 2x", alt: [heading, subheading].join(' ')
+    .rectangle-overlay.w-100.mb-4.text-shadow
+      %h1
+        = heading
+      %h6.text-uppercase.letter-spacing
+        = subheading

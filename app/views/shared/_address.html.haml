@@ -1,0 +1,20 @@
+- cache nil do
+  = insert_or_create_snippet('Common Elements', 'Footer', 'Address') do       
+
+    Eurofunding Limited Group
+    %br
+    Address line 1
+    %br
+    Address line 2
+    %br
+    Address line 3
+    %br
+    Address line 4
+    %br
+    %br
+    Tel: +xx xxx xxx xxx
+    %br
+    Fax: +xx xxx xxx xxx
+  %br
+  = mail_to 'info@eurofunding.com', 'Send us an email', subject: 'Eurofunding website enquiry'
+  -#= link_to 'Send us an email', contact_path

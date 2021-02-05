@@ -1,0 +1,4 @@
+= link_to edit_admin_section_group_snippet_path(@section, @group, snippet), class: 'list-group-item list-group-item-action' do
+  %em.float-right
+    Updated #{snippet.updated_at.in_time_zone('Asia/Manila').strftime("%F %T")}
+  = snippet.name

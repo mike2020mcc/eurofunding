@@ -1,0 +1,3 @@
+- @user = User.new(remittances: remittances, banking: banking)
+= form_for @user, remote: true do |f|
+  = render partial: 'users/fields'

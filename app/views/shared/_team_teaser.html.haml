@@ -1,0 +1,24 @@
+- cache nil do
+  .row
+    .col-md-10.offset-md-1.col-lg-8.offset-lg-2.col-xl-6.offset-xl-3
+      = link_to about_team_path, class: 'no-underline' do
+        .row.no-gutters.team
+          - images = ['compton-anthony', 'thompson-paul', 'coleclough-robert', 'pitcher-kathy', 'briones-gemma']
+          - images.reverse.each_with_index do |image, index|
+            - css = nil
+            - if index <= 1 
+              - css = 'fadeInRight'
+            - elsif index >= 3
+              - css = 'fadeInLeft'
+            .col{class: ['wow', css]}
+              %picture
+                %source{'data-srcset': "#{image_path('mugshot/' + image + '-xx.webp')}, #{image_path('mugshot/' + image + '-xx@2x.webp')} 2x", type: 'image/webp'}
+                = image_tag "mugshot/#{image}-poster.jpg", 'data-srcset': "#{image_path('mugshot/' + image + '-xx.jpg')}, #{image_path('mugshot/' + image + '-xx@2x.jpg')} 2x", class: 'lazy rounded-circle shadow', alt: 'Team member'
+              
+        .text-center.mt-5.text-uppercase.letter-spacing.no-underline
+          %strong<
+            Find out more &rarr;
+
+
+
+

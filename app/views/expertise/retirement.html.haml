@@ -1,0 +1,33 @@
+- provide(:title, 'Retirement Planning')
+- provide(:description, 'Advice about flexible retirement options that cater to a new generation of retirees.')
+- provide(:og_image, 'og-retirement-planning.jpg')
+.position-relative.overflow-hidden
+  #hero.d-flex.align-items-center
+    = hero_picture_tag 'other/retirement-planning.jpg', class: 'lazy', alt: 'Retirement Planning'
+    .container.text-white.text-center{style: 'z-index: 1'}
+      .hero-padding
+        %h1.my-2.wow.fadeInDown.text-shadow
+          Retirement #{content_tag(:span, 'Planning')}
+        %h2.my-2.wow.fadeInUp.text-shadow
+          Enjoy a future that is comfortable and financially secure
+          
+%section.container.my-7.mb-5
+  .row
+    .col
+      = insert_or_create_snippet('Retirement Planning', 'Body', 'Content') do
+        %p.lead
+          With people living to a greater age, retirement now represents a far greater proportion of our lives
+          than previously expected.
+        %p
+          The decisions we make today dictate the standard of living we will enjoy in retirement.
+        %p
+          More active lifestyles, changing working patterns and longer life expectancy have changed
+          the way people now approach retirement; with many choosing gradual or phased retirement
+          and actually continuing to be work active beyond retirement age, has led to the development
+          of more flexible solutions to meet the retirement needs of a new generation.
+        %p
+          While pension freedoms are good news for many, giving opportunity for savers to access
+          their funds, so comes with it hidden dangers; hence the need to ensure whatever you do
+          is right for YOU both now and in the future.
+
+= render partial: 'expertise_rectangles', locals: { exclude: 'retirement_planning' }

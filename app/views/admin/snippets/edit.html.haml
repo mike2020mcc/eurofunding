@@ -1,0 +1,17 @@
+%nav.mb-4
+  %ol.breadcrumb
+    %li.breadcrumb-item
+      = link_to 'All Pages', admin_sections_path
+    %li.breadcrumb-item
+      = link_to @section.name, admin_section_groups_path(@section)
+    %li.breadcrumb-item
+      = link_to @group.name, admin_section_group_snippets_path(@section, @group)
+    %li.breadcrumb-item.active
+      = @snippet.name
+
+= form_for @snippet, url: admin_section_group_snippet_path(@section, @group, @snippet) do |f|
+  .form-group
+    = f.text_area :content, class: 'form-control', rows: 20
+  .form-group
+    = f.submit 'Save', class: 'btn btn-primary btn-lg'
+  

@@ -1,0 +1,4 @@
+manifest: 'application'
+penthouse_options: 
+  forceInclude: ['.navbar.navbar-light', '.bg-white', '#hero img', '.rectangle', '.flex-column', 'h1 span', '.h1 span', '#cookieConsent', '#cookieConsent.pending']
+  

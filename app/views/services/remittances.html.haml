@@ -1,0 +1,96 @@
+- provide(:title, 'Financial Solutions Asia')
+- provide(:description, 'From savings, pensions and mortgage advice to wills and trusts, our range of services helps to make sure your money works harder for you. Both now and in the future.')
+- provide(:og_image, 'og-home.jpg')
+.position-relative.overflow-hidden
+  #hero.d-flex.align-items-center
+    = hero_picture_tag 'hero/image/home.jpg', class: 'lazy', alt: 'Home'
+
+    -#= hero_video_tag('hero/video/home.mp4', [{ size: 'xl', query: 'screen and (min-width: 1920px)' }, { size: 'lg', query: 'screen and (min-width: 1200px)' }, { size: 'md', query: 'screen and (min-width: 992px)'}, { size: 'sm', query: 'screen and (min-width: 768px)' }, { size: 'xs', query: 'screen and (min-width: 576px)' }, { size: 'xx', query: 'screen and (min-width: 0px)' }])
+    .container.text-white.text-center{style: 'z-index: 1'}
+      .hero-padding
+        %h1.my-2.wow.fadeInDown.text-shadow
+          Send money the easy way
+        %h2.my-2.wow.fadeInUp.d-none.d-sm-inline-block.text-shadow.max-width
+          Eurofunding Remittance Services provide you with a simple, fast, safe and cost-effective way to send money to family or friends.
+
+        -#.my-2.my-sm-5.hero-cta
+          = link_to 'Sign up', contact_path, class: 'btn btn-lg btn-primary mx-2 my-3'
+          = link_to 'Find out more', expertise_path, class: 'btn btn-lg btn-outline-light mx-2 d-none d-sm-inline-block'
+        
+          
+%section.container.my-7.mb-5
+  .row
+    .col.text-center
+      %h1.headline.m-0.py-4.wow.fadeInLeft
+        Same-day Remittance
+        
+      %p.lead.m-0.py-4.wow.fadeInRight{style: 'font-weight: bold'}
+        Eurofunding deliver 95% of payments to Europe by the end of the same business day. That’s as standard. Also, payments to Hong Kong and the Philippines arrive the same business day.
+
+      %p.lead.d-inline-block
+        Eurofunding only charges a fair service fee and uses the local market rate for conversion. And since we don’t rely on conventional banking channels, there are no additional fees and your recipients always get what the amount they were promised.
+
+
+%section.container.my-7.mb-5
+  = render partial: 'users/form', locals: { remittances: true, banking: false }
+
+-#%section.container.my-5.px-0.px-sm-3
+  .row.no-gutters
+    .col-md-6.col-lg-4.wow.fadeInLeft{'data-wow-duration' => '1s'}
+      = link_to expertise_path, class: 'rectangle mt-1 m-sm-1 d-block' do
+        .rectangle-inner.bg-secondary.text-white.p-5.d-flex.align-items-center.text-center
+          .w-100
+            %h4
+              %strong
+                Our Expertise
+            %p
+              From savings, pensions and mortgage advice to wills and trusts, our range of
+              services helps to make sure your money works harder for you. Both now and in the future.
+            %p.mt-4.text-uppercase.letter-spacing
+              %strong
+                All services &rarr;
+
+    .col-sm-6.col-lg-4.wow.fadeInDown{'data-wow-duration' => '1s'}
+      = render partial: 'home_rectangle', locals: { path: expertise_financial_planning_path, heading: 'Financial', subheading: 'Planning', image: 'financial-planning' }
+
+    .col-sm-6.col-lg-4.wow.fadeInRight{'data-wow-duration' => '1s'}
+      = render partial: 'home_rectangle', locals: { path: expertise_retirement_planning_path, heading: 'Retirement', subheading: 'Planning', image: 'retirement-planning' }
+
+    .col-sm-6.col-lg-4.wow.fadeInLeft{'data-wow-duration' => '1s'}
+      = render partial: 'home_rectangle', locals: { path: expertise_protection_advice_path, heading: 'Protection', subheading: 'Advice', image: 'protection-advice' }
+
+    .col-sm-6.col-lg-4.wow.fadeInUp{'data-wow-duration' => '1s'}
+      = render partial: 'home_rectangle', locals: { path: expertise_mortgage_advice_path, heading: 'Mortgage', subheading: 'Advice', image: 'mortgage-advice' }
+
+    .col-sm-6.col-lg-4.wow.fadeInRight{'data-wow-duration' => '1s'}
+      = render partial: 'home_rectangle', locals: { path: expertise_will_and_trust_advice_path, heading: 'Will & Trust', subheading: 'Advice', image: 'will-and-trust-advice' }
+
+-#%section
+  .container.my-7.mb-5
+    .row
+      .col.text-center
+        %h1.headline.m-0.py-4.wow.fadeInLeft
+          Meet the Team
+        %h2.m-0.py-4.wow.fadeInRight
+          Our team has over 50 years experience in helping individuals with their financial needs
+  .bg-primary.text-white{style: 'padding-top: 5rem; padding-bottom: 4rem'}
+    .container
+      = render partial: 'shared/team_teaser'
+   
+-#%section
+  .container.my-7.mb-5
+    .row
+      .col.text-center
+        %h1.headline.m-0.py-4.wow.fadeInLeft
+          Take control of your financial future
+        %h2.m-0.py-4.wow.fadeInRight
+          Take the first step today book a call at a time that suits you
+   
+  .container-fluid.p-0.shadow-lg.bg-white
+    .row.no-gutters
+      .col-lg-6.d-none.d-lg-block{style: 'min-height: 620px'}
+        = hero_picture_tag 'other/contact-woman.jpg', class: 'lazy img-fit', alt: 'Contact us'
+      .col-lg-6.p-5
+        = render partial: 'shared/contact_form'
+        
+

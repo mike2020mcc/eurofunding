@@ -1,0 +1,11 @@
+:plain
+  Your enquiry has been sent and the Financial Solutions team will call you back shortly.
+
+  Name: #{@data.first_name} #{@data.last_name}
+  Email: #{@data.email}
+  Telephone: #{@data.telephone}
+  Country: #{Country.try(:[], @data.country).try(:name)}
+  Preferred call time: #{@data.call_time}
+
+  Kind regards,
+  Financial Solutions Team

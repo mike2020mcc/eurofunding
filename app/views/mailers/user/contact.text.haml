@@ -1,0 +1,9 @@
+:plain
+  The following callback request was sent from the FS website:
+
+  Name: #{@data.first_name} #{@data.last_name}
+  Email: #{@data.email}
+  Telephone: #{@data.telephone}
+  Country: #{Country.try(:[], @data.country).try(:name)}
+  Preferred call time: #{@data.call_time}
+  

@@ -1,0 +1,27 @@
+- provide(:title, 'Mortgage Advice')
+- provide(:description, 'About the mortgage process and selecting the best approach to maximise saving.')
+- provide(:og_image, 'og-mortgage-advice.jpg')
+.position-relative.overflow-hidden
+  #hero.d-flex.align-items-center
+    = hero_picture_tag 'other/mortgage-advice.jpg', class: 'lazy', alt: 'Mortgage Advice'
+    .container.text-white.text-center{style: 'z-index: 1'}
+      .hero-padding
+        %h1.my-2.wow.fadeInDown.text-shadow
+          Mortgage #{content_tag(:span, 'Advice')}
+        %h2.my-2.wow.fadeInUp.text-shadow
+          Finding the right deal that fits your circumstances
+          
+%section.container.my-7.mb-5
+  .row
+    .col
+      = insert_or_create_snippet('Mortgage Advice', 'Body', 'Content') do
+        %p.lead
+          Your mortgage is probably the biggest financial commitment of your life, so it pays to get it right.
+        %p
+          We have access to a completely independent mortgage market enabling us to find the
+          deal that fits your personal circumstances best.
+        %p
+          Lending criteria and approval times are frequently changing. We consider 
+          everything in bringing speed and savings to the mortgage approval process.
+              
+= render partial: 'expertise_rectangles', locals: { exclude: 'mortgage_advice' }

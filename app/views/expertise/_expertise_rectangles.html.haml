@@ -1,0 +1,21 @@
+%section.container.mb-5
+  .row
+    - if !defined?(exclude) || exclude != 'financial_planning' 
+      .col-md-6.col-xl-4.d-flex.flex-column.wow.fadeInLeft{'data-wow-duration' => '1s'}
+        = render partial: 'expertise_rectangle', locals: { path: expertise_financial_planning_path, heading: 'Financial', subheading: 'Planning', image: 'financial-planning', body: insert_or_create_snippet('Financial Planning', 'Body', 'Content') }
+    - if !defined?(exclude) || exclude != 'retirement_planning' 
+      .col-md-6.col-xl-4.d-flex.flex-column.wow.fadeInLeft{'data-wow-duration' => '1s'}
+        = render partial: 'expertise_rectangle', locals: { path: expertise_retirement_planning_path, heading: 'Retirement', subheading: 'Planning', image: 'retirement-planning', body: insert_or_create_snippet('Retirement Planning', 'Body', 'Content') }
+    - if !defined?(exclude) || exclude != 'protection_advice' 
+      .col-md-6.col-xl-4.d-flex.flex-column.wow.fadeInLeft{'data-wow-duration' => '1s'}
+        = render partial: 'expertise_rectangle', locals: { path: expertise_protection_advice_path, heading: 'Protection', subheading: 'Advice', image: 'protection-advice', body: insert_or_create_snippet('Protection Advice', 'Body', 'Content') }
+    - if !defined?(exclude) || exclude != 'mortgage_advice' 
+      .col-md-6.col-xl-4.d-flex.flex-column.wow.fadeInLeft{'data-wow-duration' => '1s'}
+        = render partial: 'expertise_rectangle', locals: { path: expertise_mortgage_advice_path, heading: 'Mortgage', subheading: 'Advice', image: 'mortgage-advice', body: insert_or_create_snippet('Mortgage Advice', 'Body', 'Content') }
+    - if !defined?(exclude) || exclude != 'will_and_trust_advice' 
+      .col-md-6.col-xl-4.d-flex.flex-column.wow.fadeInLeft{'data-wow-duration' => '1s'}
+        = render partial: 'expertise_rectangle', locals: { path: expertise_will_and_trust_advice_path, heading: 'Will & Trust', subheading: 'Advice', image: 'will-and-trust-advice', body: insert_or_create_snippet('Will & Trust Advice', 'Body', 'Content') }
+
+
+
+

@@ -1,0 +1,104 @@
+.navbar-brand {
+  > img {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    margin-right: 0.5rem;
+  }
+  font-weight: 500;
+  font-size: 1.4rem;
+  &:hover {
+    color: theme-color(secondary);
+  }
+
+  @media (max-width: 320px) {
+    font-size: 1.1rem;
+  }
+
+}
+
+.navbar-dark .navbar-brand {
+  color: white;
+}
+
+.navbar-nav {
+  
+  .nav-link {
+    text-transform: uppercase;
+    letter-spacing: 0.15rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: 2px;
+      background-color: theme-color(secondary);
+      transition: transform 350ms;
+      transform: scaleX(0);
+    }
+
+    &:hover:before {
+      transform: scaleX(1);
+    }
+  }
+
+  .dropdown-menu {
+    margin-left: 1.5rem;
+    background-color: theme-color(primary);
+    border: none;
+    border-radius: 0;
+    margin-top: 0;
+
+    .dropdown-item {
+      color: white;
+      //text-transform: uppercase;
+      //letter-spacing: .15rem;
+      font-size: 0.9rem;
+      font-weight: bold;
+      transition: color 350ms;
+      background-color: transparent !important;
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      &:hover {
+        color: theme-color(secondary) !important;
+        background-color: rgba(black, 0.15) !important;
+      }
+
+      span {
+        font-weight: 300;
+      }
+      
+    }
+  }
+  
+}
+
+.navbar {
+  transition: background-color 350ms, box-shadow 350ms;
+  &.bg-white {
+    box-shadow: 0 0 10px rgba(black, .25);
+    .icon-bar {
+      background-color: theme-color(primary);
+    }
+    .navbar-brand {
+      color: theme-color(secondary);
+    }
+  }
+
+}
+
+.nav-item {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.nav-item.dropdown:hover {
+  .dropdown-menu {
+    display: block;
+  }
+}
+

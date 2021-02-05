@@ -1,0 +1,10 @@
+%noscript#js:defer{data: { penthouse: asset_path('application.css') }}<
+  = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+%script<
+  - cache nil do
+    = Uglifier.compile(File.read(Rails.root.join('app', 'views', 'shared', 'deferred.js'))).html_safe
+
+
+
+
+

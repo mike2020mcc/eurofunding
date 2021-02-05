@@ -1,0 +1,11 @@
+- cache nil do
+  #login.modal.fade{role: 'dialog', 'aria-labelledby' => 'modalTitle', 'aria-hidden' => true}
+    .modal-dialog
+      .modal-content  
+        - @session = AuthenticationService.new
+        = form_for @session, as: :session, url: sessions_path, remote: true do |f|
+          = render partial: 'sessions/form'
+
+
+
+

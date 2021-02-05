@@ -1,0 +1,55 @@
+- cache nil do
+  .footer.py-5.text-white
+    .container
+      .row
+        .col-lg-4
+          = link_to root_path, class: 'navbar-brand mb-3' do
+            = image_tag 'logo.svg', alt: 'Eurofunding Group Ltd.'
+            %span
+              %small
+                Eurofunding Group Ltd.
+          %p{style: 'opacity: 0.7'}
+            = insert_or_create_snippet('Common Elements', 'Footer', 'About Company') do
+              Lorem Ipsum - All the facts - Lipsum generator
+          %p
+            %span{style: 'opacity: 0.7'}
+              &copy; #{Time.now.year} Eurofunding Group Ltd.
+              %br 
+              All Rights Reserved&nbsp;&nbsp;&middot;&nbsp;&nbsp;#{link_to 'Privacy', cookies_path}
+          
+        .col-lg-8
+          .row
+            .col-lg-4.pt-3
+              %p.mb-3.letter-spacing.text-uppercase
+                = link_to 'Contact', contact_path, class: 'text-secondary'
+              %address
+                = render partial: 'shared/address'
+
+            .col-lg-4.pt-3
+              %p.mb-3.letter-spacing.text-uppercase.text-secondary
+                Services
+              %ul.list-unstyled
+                %li.py-1
+                  = link_to 'Remittances', services_remittances_path
+                %li.py-1
+                  = link_to 'Banking', services_banking_path
+
+
+            .col-lg-4.mt-3
+
+              %p.mb-3.letter-spacing.text-uppercase
+                = link_to 'About', about_path, class: 'text-secondary'
+              %ul.list-unstyled
+                %li.py-1
+                  = link_to "It's about You", about_path
+                %li.py-1
+                  = link_to 'Meet the Team', about_team_path
+
+
+              %p.mt-4.mb-3.letter-spacing.text-uppercase
+                %a.text-secondary{href: '#', data: { turbolinks: false, toggle: 'modal', target: '#login' } }
+                  Customers
+              %ul.list-unstyled
+                %li.py-1
+                  %a{href: '#', data: { turbolinks: false, toggle: 'modal', target: '#login' } }
+                    Login

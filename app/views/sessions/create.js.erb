@@ -1,0 +1,6 @@
+<% if @session.errors.any? %>
+  var loginForm = document.getElementById('login-form');
+  loginForm.outerHTML = "<%= j render partial: 'sessions/form' %>";
+<% else %>
+  window.location.href = "<%= account_path %>";
+<% end %>

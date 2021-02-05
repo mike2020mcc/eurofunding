@@ -1,0 +1,22 @@
+- provide(:title, 'Expertise')
+- provide(:description, 'Get personalised financial planning and advice to make your money worker harder for you.')
+- provide(:og_image, 'og-expertise.jpg')
+.position-relative.overflow-hidden
+  #hero.d-flex.align-items-center
+    = hero_picture_tag 'hero/image/expertise.jpg', class: 'lazy', alt: 'Expertise'
+    .container.text-white.text-center{style: 'z-index: 1'}
+      .hero-padding
+        %h1.my-2.wow.fadeInDown.text-shadow
+          #{content_tag(:span, 'Our')} Expertise
+        %h2.my-2.wow.fadeInUp.text-shadow
+          Making your money work harder for you &mdash; both now and in the future
+          
+%section.container.my-7.mb-5
+  .row
+    .col
+      = insert_or_create_snippet('Expertise', 'Body', 'Content') do
+        %p.lead
+          Your financial goals, security and wellbeing are incredibly important to us.
+          We have the expertise to give you clear and personalised advice in the areas that matter most.
+
+= render partial: 'expertise_rectangles'

@@ -1,0 +1,13 @@
+
+%nav.mb-4
+  %ol.breadcrumb
+    %li.breadcrumb-item
+      = link_to 'All Pages', admin_sections_path
+    %li.breadcrumb-item.active
+      = @section.name
+
+%h4.my-3
+  Select group
+
+.list-group
+  = render @groups

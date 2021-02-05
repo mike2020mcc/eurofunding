@@ -1,0 +1,94 @@
+!!!
+%html{lang: 'en', prefix: 'og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# website: http://ogp.me/ns/website#'}
+  %head
+    = render 'shared/head'
+  %body
+    .snap-drawers
+      %nav.snap-drawer.snap-drawer-right#drawer
+        .postion-relative
+          = link_to root_path, class: 'd-block text-center m-4' do
+            = image_tag 'logo.svg', alt: 'Euro Funding', style: 'width: 25%'
+          %ul.list-unstyled.my-2
+            %li
+              = link_to 'Home', root_path
+            %li
+              = link_to 'About', about_path
+            %li
+              = link_to 'Banking', expertise_path
+            %li
+              = link_to 'Remittance', contact_path
+            %li
+              = link_to 'Login', '#', data: { turbolinks: false, toggle: 'modal', target: '#login' }
+          %address.p-4
+            = render partial: 'shared/address'
+
+    .snap-content#snapContent
+      %header
+        %nav.navbar.navbar-expand-lg.navbar-dark.fixed-top#navbar{data: { solid: !defined?(@nav_solid).nil? }}
+          .container
+            = link_to root_path, class: 'navbar-brand' do
+              = image_tag 'logo.svg', alt: 'Euro Funding'
+              %span
+                Eurofunding
+            %button.navbar-toggler#openRight{type: 'button', 'aria-expanded' => 'false', 'aria-label' => 'Show menu'}
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            .collapse.navbar-collapse
+              %ul.navbar-nav.ml-auto
+              
+                %li.nav-item{class: controller.controller_name == 'home' ? 'active' : nil}
+                  = link_to 'Home', root_path, class: 'nav-link'
+
+                %li.nav-item{class: controller.controller_name == 'about' ? 'active' : nil}
+                  = link_to 'About', about_path, class: 'nav-link'
+                  -#.dropdown-menu
+                    = link_to about_path, class: 'dropdown-item' do
+                      #{content_tag(:span, "It's about")} You
+                    = link_to about_team_path, class: 'dropdown-item' do
+                      #{content_tag(:span, 'Meet the')} Team
+   
+                %li.nav-item{class: controller.controller_name == 'services' && controller.action_name == 'banking' ? 'active' : nil}
+                  = link_to 'Banking', services_banking_path, class: 'nav-link'
+   
+                %li.nav-item{class: controller.controller_name == 'services' && controller.action_name == 'remittances' ? 'active' : nil}
+                  = link_to 'Remittances', services_remittances_path, class: 'nav-link'
+                  -#.dropdown-menu
+                    = link_to expertise_financial_planning_path, class: 'dropdown-item' do
+                      Financial #{content_tag(:span, 'Planning')}
+                    = link_to expertise_retirement_planning_path, class: 'dropdown-item' do
+                      Retirement #{content_tag(:span, 'Planning')}
+                    = link_to expertise_protection_advice_path, class: 'dropdown-item' do
+                      Protection #{content_tag(:span, 'Advice')}
+                    = link_to expertise_mortgage_advice_path, class: 'dropdown-item' do
+                      Mortgage #{content_tag(:span, 'Advice')}
+                    = link_to expertise_will_and_trust_advice_path, class: 'dropdown-item' do
+                      Will & Trust #{content_tag(:span, 'Advice')}
+                %li.nav-item
+                  = link_to 'Contact', contact_path, class: 'nav-link'
+
+                - if signed_in_user?
+
+                  %li.nav-item{class: controller.controller_name == 'account' ? 'active' : nil }
+                    = link_to account_path, class: 'nav-link', style: 'white-space: nowrap' do
+                      = inline_svg 'padlock.svg', style: 'width: 17px'
+                      &nbsp;
+                      My Account
+                - else
+
+                  %li.nav-item
+                    = link_to '#', class: 'nav-link', data: { turbolinks: false, toggle: 'modal', target: '#login' }, style: 'white-space: nowrap' do
+                      = inline_svg 'padlock.svg', style: 'width: 17px'
+                      &nbsp;
+                      Login
+                  %li.nav-item
+                    = link_to 'Sign up', contact_path, class: 'btn btn-primary px-4', style: 'white-space: nowrap; text-transform: uppercase'
+      = render partial: 'shared/cookie_consent'
+      %main
+        = yield
+      %footer
+        = render partial: 'shared/footer'
+
+    = render partial: 'shared/login'
+    = render partial: 'shared/deferred'
+

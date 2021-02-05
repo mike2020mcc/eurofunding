@@ -1,0 +1,9 @@
+// See https://documentation.onesignal.com/docs/web-push-setup-faq#section-can-onesignal-integrate-with-another-service-worker-on-my-site-or-a-progressive-web-app-
+<% if Rails.env.production? %>
+  if (navigator.serviceWorker) {
+    navigator.serviceWorker.register('/OneSignalSDKWorker.js')
+      .then(function(reg) {
+        //console.log('[Companion]', 'Service worker registered!');
+      });
+  }
+<% end %>

@@ -1,0 +1,32 @@
+- provide(:title, 'About us')
+- provide(:description, 'You need clear and personalised advice that fulfills your financial challenges and ambitions.')
+- provide(:og_image, 'og-about.jpg')
+.position-relative.overflow-hidden
+  #hero.d-flex.align-items-center
+    = hero_picture_tag 'hero/image/about.jpg', class: 'lazy', alt: 'About us'
+    .container.text-white.text-center{style: 'z-index: 1'}
+      .hero-padding
+        %h1.my-2.wow.fadeInDown.text-shadow
+          #{content_tag(:span, "It's about")} You
+
+        %h2.my-2.wow.fadeInUp.text-shadow
+          We bring clarity to your financial challenges and ambitions
+          
+%section.container.my-7.mb-5
+  .row
+    .col
+      = insert_or_create_snippet('About', 'Body', 'Content') do
+        %p.lead
+          It's all about you, your challenges and your financial ambitions.
+        %p
+          That's why we offer our services with the core ethos that each client is an individual. It makes sense, doesn't it? What's best for one person may not be best for you. So our experts listen to your goals and use their in-depth market knowledge to give you advice that can have a meaningful impact on your personal financial circumstances. 
+        %p
+          We do this with as much warmth and clarity as possible - over the phone, at our offices or in a place that's convenient for you. If you want us to dissect the nuances of different financial strategies, we can do that. Or perhaps you would prefer advice in plain English without the complicated industry lingo. That's okay too. We believe that good financial advice is about good communication. Our raison d'être is to give you the wisdom you need to make confident decisions and move smartly towards your financial goals - whatever they may be.
+
+%section.container.my-5
+  .row
+    .col.text-center
+      %h1.headline.m-0.py-4.wow.fadeInLeft
+        Meet the Team
+  .container.my-7.mt-5
+    = render partial: 'shared/team_teaser'

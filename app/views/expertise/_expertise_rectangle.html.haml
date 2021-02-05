@@ -1,0 +1,20 @@
+.my-3.text-primary
+  %h3.mb-1
+    %strong
+      = heading
+  %h6.text-uppercase.letter-spacing
+    = subheading
+= link_to path, class: 'd-block flex-fill shadow-lg bg-white no-underline mb-5' do
+  .rectangle.rectangle-slim
+    .rectangle-inner
+      %picture
+        %source{'data-srcset': "#{image_path('other/' + image + '-xx.webp')}, #{image_path('other/' + image + '-xx@2x.webp')} 2x", type: 'image/webp'}
+        = image_tag "other/#{image}-poster.jpg", class: 'lazy', 'data-srcset': "#{image_path('other/' + image + '-xx.jpg')}, #{image_path('other/' + image + '-xx@2x.jpg')} 2x", alt: [heading, subheading].join(' ')
+        
+  .pt-4.pb-1.px-4
+    %p
+      = truncate(strip_tags(body), length: 120, separator: ' ')
+    %p.my-4.text-uppercase.text-primary.letter-spacing
+      %strong
+        Find out more &rarr;
+      
