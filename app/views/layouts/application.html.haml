@@ -14,9 +14,11 @@
             %li
               = link_to 'About', about_path
             %li
-              = link_to 'Banking', expertise_path
+              = link_to 'Banking', services_banking_path
             %li
-              = link_to 'Remittance', contact_path
+              = link_to 'Remittances', services_remittances_path
+            %li
+              = link_to 'Contact', '#', data: { turbolinks: false }
             %li
               = link_to 'Login', '#', data: { turbolinks: false, toggle: 'modal', target: '#login' }
           %address.p-4
@@ -29,7 +31,7 @@
             = link_to root_path, class: 'navbar-brand' do
               = image_tag 'logo.svg', alt: 'Euro Funding'
               %span
-                Eurofunding
+                Eurofunding Group
             %button.navbar-toggler#openRight{type: 'button', 'aria-expanded' => 'false', 'aria-label' => 'Show menu'}
               %span.icon-bar
               %span.icon-bar
@@ -65,7 +67,7 @@
                     = link_to expertise_will_and_trust_advice_path, class: 'dropdown-item' do
                       Will & Trust #{content_tag(:span, 'Advice')}
                 %li.nav-item
-                  = link_to 'Contact', contact_path, class: 'nav-link'
+                  = link_to 'Contact', '#', class: 'nav-link', data: { turbolinks: false }
 
                 - if signed_in_user?
 
@@ -81,7 +83,7 @@
                       = inline_svg 'padlock.svg', style: 'width: 17px'
                       &nbsp;
                       Login
-                  %li.nav-item
+                  -#%li.nav-item
                     = link_to 'Sign up', contact_path, class: 'btn btn-primary px-4', style: 'white-space: nowrap; text-transform: uppercase'
       = render partial: 'shared/cookie_consent'
       %main

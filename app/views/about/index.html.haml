@@ -1,5 +1,5 @@
 - provide(:title, 'About us')
-- provide(:description, 'You need clear and personalised advice that fulfills your financial challenges and ambitions.')
+- provide(:description, 'No description')
 - provide(:og_image, 'og-about.jpg')
 .position-relative.overflow-hidden
   #hero.d-flex.align-items-center
@@ -7,15 +7,23 @@
     .container.text-white.text-center{style: 'z-index: 1'}
       .hero-padding
         %h1.my-2.wow.fadeInDown.text-shadow
-          #{content_tag(:span, "It's about")} You
+          About us
 
         %h2.my-2.wow.fadeInUp.text-shadow
-          We bring clarity to your financial challenges and ambitions
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies nulla quis ex interdum pellentesque. 
           
 %section.container.my-7.mb-5
   .row
     .col
-      = insert_or_create_snippet('About', 'Body', 'Content') do
+      %p.lead
+        Ut dignissim iaculis tempus. Nunc pharetra eros at massa porta ultricies. Praesent feugiat consequat rhoncus. Aenean quis cursus mauris. Phasellus turpis leo, egestas id rhoncus in, volutpat et massa. Ut a ligula sit amet elit dapibus bibendum. Vivamus lacinia fringilla ornare. Suspendisse ac feugiat nibh.
+      %p 
+        Ut dignissim iaculis tempus. Nunc pharetra eros at massa porta ultricies. Praesent feugiat consequat rhoncus. Aenean quis cursus mauris. Phasellus turpis leo, egestas id rhoncus in, volutpat et massa. Ut a ligula sit amet elit dapibus bibendum. Vivamus lacinia fringilla ornare. Suspendisse ac feugiat nibh.
+      %p
+        Ut dignissim iaculis tempus. Nunc pharetra eros at massa porta ultricies. Praesent feugiat consequat rhoncus. Aenean quis cursus mauris. Phasellus turpis leo, egestas id rhoncus in, volutpat et massa. Ut a ligula sit amet elit dapibus bibendum. Vivamus lacinia fringilla ornare. Suspendisse ac feugiat nibh.
+      %p
+        Ut dignissim iaculis tempus. Nunc pharetra eros at massa porta ultricies. Praesent feugiat consequat rhoncus. Aenean quis cursus mauris. Phasellus turpis leo, egestas id rhoncus in, volutpat et massa. Ut a ligula sit amet elit dapibus bibendum. Vivamus lacinia fringilla ornare. Suspendisse ac feugiat nibh.
+      -#= insert_or_create_snippet('About', 'Body', 'Content') do
         %p.lead
           It's all about you, your challenges and your financial ambitions.
         %p
@@ -23,7 +31,7 @@
         %p
           We do this with as much warmth and clarity as possible - over the phone, at our offices or in a place that's convenient for you. If you want us to dissect the nuances of different financial strategies, we can do that. Or perhaps you would prefer advice in plain English without the complicated industry lingo. That's okay too. We believe that good financial advice is about good communication. Our raison d'être is to give you the wisdom you need to make confident decisions and move smartly towards your financial goals - whatever they may be.
 
-%section.container.my-5
+-#%section.container.my-5
   .row
     .col.text-center
       %h1.headline.m-0.py-4.wow.fadeInLeft

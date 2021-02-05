@@ -1,4 +1,4 @@
-- provide(:title, 'Financial Solutions Asia')
+- provide(:title, 'Eurofunding')
 - provide(:description, 'From savings, pensions and mortgage advice to wills and trusts, our range of services helps to make sure your money works harder for you. Both now and in the future.')
 - provide(:og_image, 'og-home.jpg')
 .position-relative.overflow-hidden
@@ -9,29 +9,27 @@
     .container.text-white.text-center{style: 'z-index: 1'}
       .hero-padding
         %h1.my-2.wow.fadeInDown.text-shadow
-          Send money the easy way
+          Phasellus pharetra dolor. 
         %h2.my-2.wow.fadeInUp.d-none.d-sm-inline-block.text-shadow.max-width
-          Eurofunding Remittance Services provide you with a simple, fast, safe and cost-effective way to send money to family or friends.
-
-        .my-2.my-sm-5.hero-cta
+          Maecenas eu semper nibh. Aenean vel mollis dolor. Sed ac dapibus lacus, nec tincidunt libero.
+        -#.my-2.my-sm-5.hero-cta
           = link_to 'Sign up', contact_path, class: 'btn btn-lg btn-primary mx-2 my-3'
           = link_to 'Find out more', expertise_path, class: 'btn btn-lg btn-outline-light mx-2 d-none d-sm-inline-block'
-        %p
+        
           
 %section.container.my-7.mb-5
   .row
     .col.text-center
       %h1.headline.m-0.py-4.wow.fadeInLeft
-        Same-day Remittance
+        Aliquam nec accumsan ex.
         
       %h2.m-0.py-4.wow.fadeInRight
-        Eurofunding deliver 95% of payments to Europe by the end of the same business day. That’s as standard. Also, payments to Hong Kong and the Philippines arrive the same business day.
+        Aenean vel mollis dolor. Sed ac dapibus lacus, nec tincidunt libero. Praesent ac dolor libero. Mauris velit dui, volutpat pellentesque hendrerit eu, interdum nec ante.
 
       %p.lead.d-inline-block
-        Eurofunding only charges a fair service fee and uses the local market rate for conversion. And since we don’t rely on conventional banking channels, there are no additional fees and your recipients always get what the amount they were promised.
+        Aenean vel mollis dolor. Sed ac dapibus lacus, nec tincidunt libero. Praesent ac dolor libero. Mauris velit dui, volutpat pellentesque hendrerit eu, interdum nec ante.
 
-
-%section.container.my-5.px-0.px-sm-3
+-#%section.container.my-5.px-0.px-sm-3
   .row.no-gutters
     .col-md-6.col-lg-4.wow.fadeInLeft{'data-wow-duration' => '1s'}
       = link_to expertise_path, class: 'rectangle mt-1 m-sm-1 d-block' do
@@ -62,7 +60,7 @@
     .col-sm-6.col-lg-4.wow.fadeInRight{'data-wow-duration' => '1s'}
       = render partial: 'home_rectangle', locals: { path: expertise_will_and_trust_advice_path, heading: 'Will & Trust', subheading: 'Advice', image: 'will-and-trust-advice' }
 
-%section
+-#%section
   .container.my-7.mb-5
     .row
       .col.text-center
@@ -74,7 +72,7 @@
     .container
       = render partial: 'shared/team_teaser'
    
-%section
+-#%section
   .container.my-7.mb-5
     .row
       .col.text-center

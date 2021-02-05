@@ -1,17 +1,20 @@
 - provide(:title, 'Banking')
 - provide(:description, 'From savings, pensions and mortgage advice to wills and trusts, our range of services helps to make sure your money works harder for you. Both now and in the future.')
-- provide(:og_image, 'og-home.jpg')
+- provide(:og_image, 'og-services-banking.jpg')
 .position-relative.overflow-hidden
   #hero.d-flex.align-items-center
-    = hero_picture_tag 'hero/image/home.jpg', class: 'lazy', alt: 'Home'
+    = hero_picture_tag 'hero/image/services-banking.jpg', class: 'lazy', alt: 'Banking'
 
     -#= hero_video_tag('hero/video/home.mp4', [{ size: 'xl', query: 'screen and (min-width: 1920px)' }, { size: 'lg', query: 'screen and (min-width: 1200px)' }, { size: 'md', query: 'screen and (min-width: 992px)'}, { size: 'sm', query: 'screen and (min-width: 768px)' }, { size: 'xs', query: 'screen and (min-width: 576px)' }, { size: 'xx', query: 'screen and (min-width: 0px)' }])
     .container.text-white.text-center{style: 'z-index: 1'}
       .hero-padding
         %h1.my-2.wow.fadeInDown.text-shadow
-          The easy way to bank
+          Private banking for business owners
         %h2.my-2.wow.fadeInUp.d-none.d-sm-inline-block.text-shadow.max-width
-          Eurofunding Banking Services provide you with a simple, fast, safe and cost-effective way to send money to family or friends.
+          A flexible approach from like-minded people.
+        .max-width{style: 'margin: 0 auto'}
+          %p.lead
+            Expert, versatile and designed around your needs as a business owner. A private banking service created by entrepreneurs, for entrepreneurs.
 
         -#.my-2.my-sm-5.hero-cta
           = link_to 'Sign up', contact_path, class: 'btn btn-lg btn-primary mx-2 my-3'
@@ -22,13 +25,71 @@
   .row
     .col.text-center
       %h1.headline.m-0.py-4.wow.fadeInLeft
-        Same-day Remittance
-        
-      %p.lead.m-0.py-4.wow.fadeInRight{style: 'font-weight: bold'}
-        Eurofunding deliver 95% of payments to Europe by the end of the same business day. That’s as standard. Also, payments to Hong Kong and the Philippines arrive the same business day.
+        Banking for Business
+      %h2
+        %strong
+          Your business. Your solutions.
+  .row
+    .col
+      %p.lead.m-0.py-4
+        As your business evolves, so do your needs. Work with a banking partner who takes the time to understand your business and empowers your growth ambitions.
 
-      %p.lead.d-inline-block
+      %p
         Eurofunding only charges a fair service fee and uses the local market rate for conversion. And since we don’t rely on conventional banking channels, there are no additional fees and your recipients always get what the amount they were promised.
+      %h2.headline.py-4
+        Private Banking
+      %p
+        Our hand-selected Private Banking experts are your dedicated resource for banking, investment, and other financial services, regardless of your account balance.
+      %p
+        Private Banking is available to all our business clients. 
+
+      %h2.py-4
+        Highlights
+      %ul
+        %li
+          High-touch, high-class experience
+        %li
+          Direct access to dedicated expert
+        %li
+          Concierge service anytime, anywhere
+        %li
+          Prompt resolutions
+        %li
+          Available to all customers regardless of account balance
+
+      %h2.py-4
+        Benefits & Features
+      %p
+        %strong
+          High Touch, High Class
+      %p
+        Our top-notch Private Bankers are your direct point of contact for all things banking, wherever you are, whenever you need them. We are eager to help you and your business access all the resources available to you at Eurofunding.
+
+      %p
+        %strong
+          Independent Access through Digital Channels 
+      %p
+        Maintain control over your personal wealth with digital tools to communicate with your Private Banking team and manage the details of your finances. You’ll still have a direct person to reach out to when you need to.
+
+
+      %p
+        %strong
+          Hand-Selected Team 
+      %p
+        We seek out extremely qualified individuals who are invested in your financial health and success. Our Private Bankers can address any issues that may arise directly, and connect you to specialists for any additional needs, including lending and wealth management.
+
+      %p
+        %strong
+          Eurofunding Business Current Account
+      %p
+        Empower your business to excel with this market-leading current account. Our Eurofunding Business Current account is perfect for small to medium-sized businesses and non-profits. We believe business current accounts should be easy to understand. Therefore, our account  has no monthly fees, no minimum balance requirements, Cash Management functionality, and private banking services along with the best in online and mobile banking.
+
+
+      %h2.py-4.text-center
+        Registration form - work in progress
+
+
+
 
 
 -#%section.container.my-5.px-0.px-sm-3
