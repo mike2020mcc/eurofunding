@@ -2,7 +2,7 @@
 lock "~> 3.11.0"
 
 set :application, 'fs'
-set :repo_url, 'git@bitbucket.org:jaybloke/eurofunding.git'
+set :repo_url, 'git@github.com:jaybloke/eurofunding.git'
 set :stages, ['staging', 'production']
 set :default_stage, 'staging'
 

@@ -23,3 +23,15 @@ development:
   shufti_callback_url: 'https://c0ffe43ecccf.ngrok.io/callback'
   shufti_redirect_url: 'https://c0ffe43ecccf.ngrok.io/account'
 
+
+staging:
+  shufti_callback_url: 'http://eurofunding-staging.ajkoffshore.com/callback'
+  shufti_redirect_url: 'http://eurofunding-staging.ajkoffshore.com/account'
+
+
+production:
+  shufti_callback_url: 'https://www.eurofunding.co.uk/callback'
+  shufti_redirect_url: 'https://www.eurofunding.co.uk/account'
+
+
+
