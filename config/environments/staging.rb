@@ -92,7 +92,7 @@ Rails.application.configure do
 
 
   #config.action_controller.asset_host = config.action_mailer.asset_host = 'http://fs-staging.ajkoffshore.com'
-  config.action_mailer.default_url_options = { host: 'fs-staging.ajkoffshore.com' }
+  config.action_mailer.default_url_options = { host: 'eurofunding-staging.ajkoffshore.com' }
 
 
 
