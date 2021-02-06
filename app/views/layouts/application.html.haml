@@ -18,8 +18,6 @@
             %li
               = link_to 'Remittances', services_remittances_path
             %li
-              = link_to 'Contact', '#', data: { turbolinks: false }
-            %li
               = link_to 'Login', '#', data: { turbolinks: false, toggle: 'modal', target: '#login' }
           %address.p-4
             = render partial: 'shared/address'
@@ -66,8 +64,6 @@
                       Mortgage #{content_tag(:span, 'Advice')}
                     = link_to expertise_will_and_trust_advice_path, class: 'dropdown-item' do
                       Will & Trust #{content_tag(:span, 'Advice')}
-                %li.nav-item
-                  = link_to 'Contact', '#', class: 'nav-link', data: { turbolinks: false }
 
                 - if signed_in_user?
 

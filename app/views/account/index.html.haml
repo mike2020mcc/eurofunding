@@ -30,6 +30,14 @@
           = current_user.login_ip
 
       %p
+        Banking applicant:&nbsp;
+        %strong
+          = current_user.banking?
+        %br
+        Remittances applicant:&nbsp;
+        %strong
+          = current_user.remittances?
+        %br
         Status:&nbsp;
         %strong
           = current_user.shufti_event_formatted

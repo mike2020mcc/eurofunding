@@ -38,8 +38,8 @@ Rails.application.routes.draw do
 
   get 'cookies', to: 'cookies#index'
 
-  namespace :admin, path: '_fsadmin' do
-    get '', to: redirect('/_fsadmin/sections')
+  namespace :admin, path: '_admin' do
+    get '', to: redirect('/_admin/sections')
     resources :sections, only: [:index, :show, :destroy] do
       resources :groups, only: [:index, :show, :destroy] do
         resources :snippets, only: [:index, :edit, :update, :destroy]
