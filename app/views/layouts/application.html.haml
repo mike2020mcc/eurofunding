@@ -27,7 +27,7 @@
         %nav.navbar.navbar-expand-lg.navbar-dark.fixed-top#navbar{data: { solid: !defined?(@nav_solid).nil? }}
           .container
             = link_to root_path, class: 'navbar-brand' do
-              = image_tag 'logo.svg', alt: 'Euro Funding'
+              = image_tag 'logo.svg', alt: 'Euro Funding', size: "40x40", style: "margin-right: 0.5rem"
               %span
                 Eurofunding
             %button.navbar-toggler#openRight{type: 'button', 'aria-expanded' => 'false', 'aria-label' => 'Show menu'}
