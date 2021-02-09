@@ -25,5 +25,5 @@ staging:
   shufti_redirect_url: 'http://eurofunding-staging.ajkoffshore.com/account'
 
 production:
-  shufti_callback_url: 'http://eurofunding-production.ajkoffshore.com/callback'
-  shufti_redirect_url: 'http://eurofunding-production.ajkoffshore.com/account'
+  shufti_callback_url: 'https://www.eurofunding.co.uk/callback'
+  shufti_redirect_url: 'https://www.eurofunding.co.uk/account'
