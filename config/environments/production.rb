@@ -91,6 +91,6 @@ Rails.application.configure do
   # EDITOR="code --wait"  bin/rails credentials:edit
 
   #config.action_controller.asset_host = config.action_mailer.asset_host = 'https://www2.financialsolutions.asia'
-  config.action_mailer.default_url_options = { host: 'eurofunding-production.ajkoffshore.com' }
+  config.action_mailer.default_url_options = { host: 'eurofunding.co.uk' }
   
 end
