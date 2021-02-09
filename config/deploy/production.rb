@@ -1,4 +1,4 @@
-server 'eurofunding-staging.ajkoffshore.com', user: 'deploy', roles: [:web, :app, :db], primary: true
+server '18.135.205.233', user: 'deploy', roles: [:web, :app, :db], primary: true
 set :deploy_to, '/home/deploy/eurofunding/production'
 set :stage, :production
 set :linked_files, fetch(:linked_files, []).push('db/production.sqlite3')
