@@ -9,20 +9,20 @@
         %h1.my-2.wow.fadeInDown.text-shadow
           About us
 
-        %h2.my-2.wow.fadeInUp.text-shadow.max-width.d-inline-block
+        -#%h2.my-2.wow.fadeInUp.text-shadow.max-width.d-inline-block
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ultricies nulla quis ex interdum pellentesque. 
           
 %section.container.my-7.mb-5
   .row
     .col
       %p.lead
-        Ut dignissim iaculis tempus. Nunc pharetra eros at massa porta ultricies. Praesent feugiat consequat rhoncus. Aenean quis cursus mauris. Phasellus turpis leo, egestas id rhoncus in, volutpat et massa. Ut a ligula sit amet elit dapibus bibendum. Vivamus lacinia fringilla ornare. Suspendisse ac feugiat nibh.
+        Eurofunding offer a range of local and international banking services designed to suit your unique needs that you can access via your dedicated private banker and our 24/7/365 global Client Support Center and on line banking.
+
+
       %p 
-        Ut dignissim iaculis tempus. Nunc pharetra eros at massa porta ultricies. Praesent feugiat consequat rhoncus. Aenean quis cursus mauris. Phasellus turpis leo, egestas id rhoncus in, volutpat et massa. Ut a ligula sit amet elit dapibus bibendum. Vivamus lacinia fringilla ornare. Suspendisse ac feugiat nibh.
-      %p
-        Ut dignissim iaculis tempus. Nunc pharetra eros at massa porta ultricies. Praesent feugiat consequat rhoncus. Aenean quis cursus mauris. Phasellus turpis leo, egestas id rhoncus in, volutpat et massa. Ut a ligula sit amet elit dapibus bibendum. Vivamus lacinia fringilla ornare. Suspendisse ac feugiat nibh.
-      %p
-        Ut dignissim iaculis tempus. Nunc pharetra eros at massa porta ultricies. Praesent feugiat consequat rhoncus. Aenean quis cursus mauris. Phasellus turpis leo, egestas id rhoncus in, volutpat et massa. Ut a ligula sit amet elit dapibus bibendum. Vivamus lacinia fringilla ornare. Suspendisse ac feugiat nibh.
+        With the UK as our home, Eurofunding has grown to more than 5 offices in 5 countries worldwide; our growing private bank network includes a presence in Hong Kong, Russia, France, The Isle of Man  and The Philippines. We serve the high net worth banking segments in Hong Kong and Europe.
+
+     
       -#= insert_or_create_snippet('About', 'Body', 'Content') do
         %p.lead
           It's all about you, your challenges and your financial ambitions.
@@ -30,6 +30,9 @@
           That's why we offer our services with the core ethos that each client is an individual. It makes sense, doesn't it? What's best for one person may not be best for you. So our experts listen to your goals and use their in-depth market knowledge to give you advice that can have a meaningful impact on your personal financial circumstances. 
         %p
           We do this with as much warmth and clarity as possible - over the phone, at our offices or in a place that's convenient for you. If you want us to dissect the nuances of different financial strategies, we can do that. Or perhaps you would prefer advice in plain English without the complicated industry lingo. That's okay too. We believe that good financial advice is about good communication. Our raison d'être is to give you the wisdom you need to make confident decisions and move smartly towards your financial goals - whatever they may be.
+
+
+= render partial: 'services/services'
 
 -#%section.container.my-5
   .row

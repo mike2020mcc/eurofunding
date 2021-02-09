@@ -7,8 +7,8 @@
     %meta{'http-equiv': 'Content-Language', content: 'en'}
     %meta{name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no'}
     %meta{name: 'apple-mobile-web-app-capable', content: 'yes'}
-    %meta{name: 'author', content: 'Eurofunding Group Ltd.'}
-    %meta{name: 'copyright', content: "Copyright #{Time.now.year} Eurofunding Group Ltd."}
+    %meta{name: 'author', content: 'Eurofunding Ltd.'}
+    %meta{name: 'copyright', content: "Copyright #{Time.now.year} Eurofunding Ltd."}
     %meta{name: 'apple-mobile-web-app-status-bar-style', content: 'white'}
     %meta{name: 'apple-mobile-web-app-title', content: 'FS'}
     %meta{name: 'format-detection', content: 'telephone=no'}
@@ -21,7 +21,7 @@
     = javascript_include_tag 'admin', 'data-turbolinks-track': 'reload', defer: true
   %body
     %nav.navbar.navbar-expand-lg.fixed-top.navbar-dark.bg-primary
-      = link_to 'Eurofunding Group Admin', admin_path, class: 'navbar-brand'
+      = link_to 'Eurofunding Admin', admin_path, class: 'navbar-brand'
       -#%button.navbar-toggler{'aria-controls': 'navbarNavDropdown', 'aria-expanded': 'false', 'aria-label': 'Toggle navigation', 'data-target': '#navbarNavDropdown', 'data-toggle': 'collapse', type: 'button'}
         %span.navbar-toggler-icon
       -#navbarNavDropdown.collapse.navbar-collapse

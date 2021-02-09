@@ -4,16 +4,16 @@
       .row
         .col-lg-4
           = link_to root_path, class: 'navbar-brand mb-3' do
-            = image_tag 'logo.svg', alt: 'Eurofunding Group Ltd.'
+            = image_tag 'logo.svg', alt: 'Eurofunding Ltd.'
             %span
               %small
-                Eurofunding Group Ltd.
+                Eurofunding Ltd.
           %p{style: 'opacity: 0.7'}
             = insert_or_create_snippet('Common Elements', 'Footer', 'About Company') do
               Lorem Ipsum - All the facts - Lipsum generator
           %p
             %span{style: 'opacity: 0.7'}
-              &copy; #{Time.now.year} Eurofunding Group Ltd.
+              &copy; #{Time.now.year} Eurofunding Ltd.
               %br 
               All Rights Reserved&nbsp;&nbsp;&middot;&nbsp;&nbsp;#{link_to 'Privacy', cookies_path}
           

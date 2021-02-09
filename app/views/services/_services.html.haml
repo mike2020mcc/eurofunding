@@ -1,0 +1,18 @@
+%section.container.my-7.px-0.px-sm-3
+  .row.no-gutters
+    .col-md-6.col-lg-4.wow.fadeInLeft.d-flex{'data-wow-duration' => '1s'}
+      %div.rectange.mt-1.m-sm-1.d-block
+        .rectangle-inner.bg-secondary.text-white.p-5.d-flex.align-items-center.text-center.h-100
+          .w-100
+            %h4
+              %strong
+                Our Services
+            %p
+              We offer E-Commerce and bank card processing solutions for all industries and markets.
+
+    .col-sm-6.col-lg-4.wow.fadeInDown{'data-wow-duration' => '1s'}
+      = render partial: 'services/rectangle', locals: { path: services_banking_path, heading: 'Banking', subheading: 'Services', image: 'services-banking' }
+
+    .col-sm-6.col-lg-4.wow.fadeInRight{'data-wow-duration' => '1s'}
+      = render partial: 'services/rectangle', locals: { path: services_remittances_path, heading: 'Remittance', subheading: 'Services', image: 'services-remittances' }
+
