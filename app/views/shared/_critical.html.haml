@@ -1,6 +1,9 @@
-- if Rails.env.development?
+%style{type: 'text/css'}
+  = Rails.application.assets_manifest.find_sources('application.css').first.to_s.html_safe
+
+-#- if Rails.env.development?
   %style{type: 'text/css'}
     = Rails.application.assets_manifest.find_sources('application.css').first.to_s.html_safe
-- else
+-#- else
   = critical_css
  
