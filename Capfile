@@ -23,11 +23,10 @@ require "capistrano/scm/git"
 install_plugin Capistrano::SCM::Git
 install_plugin Capistrano::Puma
 
-task :use_monit do
-  install_plugin Capistrano::Puma::Monit
-end
-
-task 'production' => [:use_monit]
+#task :use_monit do
+#  install_plugin Capistrano::Puma::Monit
+#end
+#task 'production' => [:use_monit]
 
 
 

@@ -21,6 +21,12 @@ set :puma_preload_app, true
 set :puma_plugins, []  #accept array of plugins
 set :nginx_use_ssl, false
 
+set :ssh_options, {
+  port: 22,
+  forward_agent: false,
+  keepalive: true,
+  keepalive_interval: 30
+}
 
 # server-based syntax
 # ======================
