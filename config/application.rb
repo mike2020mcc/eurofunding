@@ -48,7 +48,7 @@ module Eurofunding
       port: 587,
       user_name: Rails.application.credentials.ses_user_name,
       password: Rails.application.credentials.ses_password,
-      domain: 'financialsolutions.asia',
+      domain: 'eurofunding.co.uk',
       authentication: 'login',
       enable_starttls_auto: true
     }
