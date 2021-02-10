@@ -4,7 +4,7 @@ class UsersController < ApplicationController
   # POST /users
 
   def create
-    @user = User.new(user_params.merge!(login_ip: request.ip, login_country: CountriesService.lookup(request.ip), login_at: Time.current))
+    @user = User.new(user_params.merge!(login_ip: request.remote_ip, login_country: CountriesService.lookup(request.remote_ip), login_at: Time.current))
     respond_to do |format|
       if @user.valid?
         reference = SecureRandom.uuid

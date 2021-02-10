@@ -3,7 +3,7 @@ module CurrentUserHelper
   AUTHORIZATION_KEY = 'User'
 
   def sign_in_user(user)
-    user.login!(request.ip)
+    user.login!(request.remote_ip)
     cookies.permanent.encrypted[AUTHORIZATION_KEY] = { value: user.id } #, httponly: true } - otherwise cannot access in js
   end
 
