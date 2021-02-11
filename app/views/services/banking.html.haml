@@ -86,6 +86,9 @@
 
 
 %section.container.my-7.mb-5
+  %p.lead.text-center
+    = link_to 'Download Application Form (PDF, 1mb)', '/Eurofunding_Application_Form.pdf', target: '_blank', style: 'color: #000; text-decoration: underline'
+%section.container.my-7.mb-5
   %h2.text-center.headline.py-5
     Apply now
   = render partial: 'users/form', locals: { remittances: false, banking: true }
